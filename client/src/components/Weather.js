@@ -27,8 +27,16 @@ function Weather(props) {
        console.log(latitude)
        console.log(longitude)
        const apiKey = `00b0dda3295804976daaf4ca564bdf04`;
-       let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely&appid=${apiKey}&units=imperial`;
-        const response = await axios.get(apiURL)
+       let apiURL = `https://api.openweathermap.org/data/2.5/onecall`;
+        const response = await axios.get(apiURL, {
+          params: {
+            lat: latitude,
+            lon: longitude,
+            exclude: "minutely",
+            appid: apiKey,
+            units: "imperial",
+          },
+        });
         const result = response.data
         console.log(result)
         // setWeather(result)
