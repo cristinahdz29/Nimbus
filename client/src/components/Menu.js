@@ -8,6 +8,8 @@ import FormControl from "react-bootstrap/FormControl";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { connect } from "react-redux";
+import '../styles/menu.css'
+import Cloud from "./Cloud";
 
 function Menu(props) {
   // need a local state to store the city user entered in textbox
@@ -68,15 +70,23 @@ function Menu(props) {
 
   return (
     <div className="navbar-div">
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/weather">Nimbus</Navbar.Brand>
+      <Navbar className="color-nav" expand="lg">
+        <Navbar.Brand href="/weather">
+          <div className="main-title"><Cloud /></div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {/* <Nav.Link href="#home">Home</Nav.Link> */}
-            <NavLink to="/user/favorites">Favorites</NavLink>
-            <Nav.Link href="#link">Hourly Forecast</Nav.Link>
-            <Nav.Link href="#link">7 Day Forecast</Nav.Link>
+            <NavLink to="/user/favorites">
+              <div className="title">Favorites</div>
+            </NavLink>
+            <Nav.Link href="#link">
+              <div className="title">Hourly Forecast</div>
+            </Nav.Link>
+            <Nav.Link href="#link">
+              <div className="title">7 Day Forecast</div>
+            </Nav.Link>
           </Nav>
           <Form inline>
             <FormControl
@@ -86,11 +96,13 @@ function Menu(props) {
               className="mr-sm-2"
               onChange={handleChange}
             />
-            <Button variant="outline-primary" onClick={handleSearch}>Search</Button>
+            <Button variant="outline-primary" onClick={handleSearch}>
+              <div className="title">Search</div>
+            </Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      
+
       {/* <h1>{city}</h1> */}
     </div>
   );

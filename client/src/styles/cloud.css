@@ -1,0 +1,15 @@
+
+
+.svg-div {
+    fill: white;
+    width: 65px;
+    /* margin: 0 auto; */
+    height: 51px;
+    
+
+}
+
+.svg-div svg {
+    height: 80px;
+    width: 100%;
+}

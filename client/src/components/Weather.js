@@ -3,6 +3,7 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 import CurrentWeather from './CurrentWeather'
 import DailyWeather from './DailyWeather'
+import CurrentWeatherDetails from './CurrentWeatherDetails'
 
 function Weather(props) {
     // make a local state to store weather object in
@@ -62,7 +63,7 @@ function Weather(props) {
 
     return (
       <div>
-        <h1>Weather Component</h1>
+        {/* <h1>Weather Component</h1> */}
         {/* <h3>{props.weather.lat}</h3>
         {props.weather.isWeatherLoaded ? (
           <>
@@ -74,6 +75,7 @@ function Weather(props) {
         )} */}
         <CurrentWeather></CurrentWeather>
         <DailyWeather />
+        <CurrentWeatherDetails />
       </div>
     );
 

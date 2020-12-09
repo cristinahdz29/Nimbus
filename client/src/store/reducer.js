@@ -19,14 +19,17 @@ const reducer = (state = initialState, action) => {
     const mainDescription = action.payload.current.weather[0].main;
     const description = action.payload.current.weather[0].description;
     const icon = action.payload.current.weather[0].icon;
+    const wind_speed = action.payload.current.wind_speed
+    const clouds = action.payload.current.clouds
+    const uvi = action.payload.current.uvi
 
     const utcDateSunrise = new Date(action.payload.current.sunrise * 1000);
     const localDateSunrise = new Date(utcDateSunrise.toLocaleString());
-    const sunrise = dayjs(localDateSunrise).format("h A");
+    const sunrise = dayjs(localDateSunrise).format("h:mm A");
 
     const utcDateSunset = new Date(action.payload.current.sunset * 1000);
     const localDateSunset = new Date(utcDateSunset.toLocaleString());
-    const sunset = dayjs(localDateSunset).format("h A");
+    const sunset = dayjs(localDateSunset).format("h:mm A");
     
     const dailyValues = action.payload.daily.map((day) => ({
       feels_like_day: day.feels_like.day,
@@ -48,12 +51,12 @@ const reducer = (state = initialState, action) => {
       sunrise: (() => {
         const utcDate = new Date(day.sunrise * 1000);
         const localDate = new Date(utcDate.toLocaleString());
-        return dayjs(localDate).format("h A");
+        return dayjs(localDate).format("h:mm A");
       })(),
       sunset: (() => {
         const utcDate = new Date(day.sunset * 1000);
         const localDate = new Date(utcDate.toLocaleString());
-        return dayjs(localDate).format("h A");
+        return dayjs(localDate).format("h:mm A");
       })(),
     }));
     const hourlyValues = action.payload.hourly.map((hour) => ({
@@ -81,6 +84,9 @@ const reducer = (state = initialState, action) => {
         mainDescription: mainDescription,
         description: description,
         icon: icon,
+        uvi: uvi,
+        wind_speed: wind_speed,
+        clouds: clouds,
         sunrise: sunrise,
         sunset: sunset,
         dailyValues: dailyValues,
