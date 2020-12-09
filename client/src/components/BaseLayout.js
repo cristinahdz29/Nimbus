@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 function BaseLayout(props) {
   return (
     <div>
-      <Menu></Menu>
+      <Menu {...props} ></Menu>
       {props.children}
       <footer>Footer</footer>
     </div>
