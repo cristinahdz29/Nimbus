@@ -75,7 +75,7 @@ function Login(props) {
           />
         </Form.Group>
 
-        <Button className="button-color" variant="light" onClick={handleLogin}>
+        <Button size="lg" className="button-color" variant="light" onClick={handleLogin}>
           <div className="button-text">Login</div>
         </Button>
       </Form>

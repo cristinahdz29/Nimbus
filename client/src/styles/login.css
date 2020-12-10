@@ -50,11 +50,11 @@ p {
      
 }
 
-button {
+/* #login-button {
     width: 38%;
     height:34px;
     margin-top: 5%
-}
+} */
 
 .input-sizing {
     margin-bottom: none;
