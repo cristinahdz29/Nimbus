@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 // import NavLink from 'react-bootstrap/esm/NavLink'
 import { NavLink } from "react-router-dom";
 
+import "../styles/login.css"
+import Cloud from "./Cloud";
+
 function Login(props) {
   // Login in component will have to hit the server
   // Because will have to check if the username exists
@@ -46,10 +49,14 @@ function Login(props) {
   };
   return (
     <div className="login-div">
-      <h2>Login</h2>
+      <div className="title-logo">
+        <Cloud />
+        <h3>Nimbus</h3>
+        </div>
+      
       <Form>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Username</Form.Label>
+          <Form.Label></Form.Label>
           <Form.Control
             type="username"
             placeholder="Enter username"
@@ -58,7 +65,7 @@ function Login(props) {
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label></Form.Label>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -66,12 +73,13 @@ function Login(props) {
           />
         </Form.Group>
 
-        <Button variant="primary" onClick={handleLogin}>
-          Login
+        <Button className="button-color" variant="light" onClick={handleLogin}>
+          <div className="button-text">Login</div>
         </Button>
       </Form>
+      
       <p>
-        Need an account? <NavLink to="/register">Sign Up</NavLink>
+        Need an account? <NavLink to="/register"><div className="link">Sign Up</div></NavLink>
       </p>
     </div>
   );

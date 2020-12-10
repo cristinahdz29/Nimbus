@@ -72,7 +72,9 @@ function Menu(props) {
     <div className="navbar-div">
       <Navbar className="color-nav" expand="lg">
         <Navbar.Brand href="/weather">
-          <div className="main-title"><Cloud /></div>
+          <div className="main-title">
+            <Cloud />
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -86,6 +88,9 @@ function Menu(props) {
             </Nav.Link>
             <Nav.Link href="#link">
               <div className="title">7 Day Forecast</div>
+            </Nav.Link>
+            <Nav.Link href="#link">
+              <div className="title">Logout</div>
             </Nav.Link>
           </Nav>
           <Form inline>

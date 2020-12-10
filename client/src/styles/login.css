@@ -1,0 +1,48 @@
+.login-div {
+  background-color: #1697B7;
+  color: white;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  text-align: center;
+  font-size: 18px;
+  padding: 97px 0;
+  /* border-radius: 10px; */
+  /* margin-top: 7%; */
+}
+
+.login-div input {
+  width: 80%;
+  margin: 0 auto;
+  height: calc(1.5em + 2.5rem + 2px)
+}
+
+.login-div button {
+  margin-left: 10px;
+}
+
+.title-logo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+
+h3 {
+    font-size: 40px;
+}
+
+p {
+    margin-top: 6%;
+}
+
+.button-text {
+    color: #1697B7;
+}
+
+.link {
+    color: #F3AD78;
+}
+
+.button-color {
+    background-color: 
+}
