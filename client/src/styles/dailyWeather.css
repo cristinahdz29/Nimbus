@@ -1,0 +1,26 @@
+.daily-main-div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: space-evenly; */
+    color: #1697B7;
+    width: 85%;
+    margin: 0 auto;
+    border-top: 0.5px solid #F3AD78;
+    
+}
+
+.day-div {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.weekday, .icon, .temp {
+    width: 33%;
+    /* text-align: center; */
+}
+
+.temp, .icon{
+   text-align: center; 
+}

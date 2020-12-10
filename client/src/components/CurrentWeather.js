@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import '../styles/currentWeather.css'
+import Button from "react-bootstrap/Button"; 
 
 function CurrentWeather(props) {
   return (
@@ -8,6 +9,11 @@ function CurrentWeather(props) {
       {/* <h2>Current Weather Box</h2> */}
       {props.weather.isWeatherLoaded ? (
         <>
+          <div className="favorite">
+            <Button variant="outline-info" size="sm">
+              Favorite
+            </Button>
+          </div>
           <h1 id="city">{props.weather.city}</h1>
           <h2>{props.weather.description}</h2>
           <img

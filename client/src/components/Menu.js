@@ -101,7 +101,7 @@ function Menu(props) {
               className="mr-sm-2"
               onChange={handleChange}
             />
-            <Button variant="outline-primary" onClick={handleSearch}>
+            <Button variant="outline-primary"  size="sm" onClick={handleSearch}>
               <div className="title">Search</div>
             </Button>
           </Form>

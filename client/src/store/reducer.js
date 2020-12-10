@@ -1,6 +1,8 @@
 const initialState = {
   weather: {
     isWeatherLoaded: false,
+    dailyValues: [],
+    hourlyValues: []
   },
 };
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import CurrentWeather from './CurrentWeather'
 import DailyWeather from './DailyWeather'
 import CurrentWeatherDetails from './CurrentWeatherDetails'
+import HourlyWeather from './HourlyWeather'
 
 function Weather(props) {
     // make a local state to store weather object in
@@ -74,6 +75,7 @@ function Weather(props) {
           <p>"Loading..."</p>
         )} */}
         <CurrentWeather></CurrentWeather>
+        <HourlyWeather />
         <DailyWeather />
         <CurrentWeatherDetails />
       </div>
