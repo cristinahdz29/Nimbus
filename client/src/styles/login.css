@@ -8,6 +8,7 @@
   padding: 97px 0;
   /* border-radius: 10px; */
   /* margin-top: 7%; */
+  /* margin-bottom: 0; */
 }
 
 .login-div input {
@@ -28,11 +29,12 @@
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 55px;
 }
 
 p {
     margin-top: 6%;
+    font-size: 26px;
 }
 
 .button-text {
@@ -44,5 +46,16 @@ p {
 }
 
 .button-color {
-    background-color: 
+    background-color: #F3F3F3;
+     
+}
+
+button {
+    width: 38%;
+    height:34px;
+    margin-top: 5%
+}
+
+.input-sizing {
+    margin-bottom: none;
 }

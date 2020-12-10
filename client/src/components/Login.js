@@ -52,14 +52,15 @@ function Login(props) {
       <div className="title-logo">
         <Cloud />
         <h3>Nimbus</h3>
-        </div>
-      
+      </div>
+
       <Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label></Form.Label>
           <Form.Control
+            class="input-sizing"
             type="username"
-            placeholder="Enter username"
+            placeholder="Enter email"
             onChange={handleOnChange}
           />
         </Form.Group>
@@ -67,6 +68,7 @@ function Login(props) {
         <Form.Group controlId="formBasicPassword">
           <Form.Label></Form.Label>
           <Form.Control
+            class="input-sizing"
             type="password"
             placeholder="Password"
             onChange={handleOnChange}
@@ -77,9 +79,12 @@ function Login(props) {
           <div className="button-text">Login</div>
         </Button>
       </Form>
-      
+
       <p>
-        Need an account? <NavLink to="/register"><div className="link">Sign Up</div></NavLink>
+        Need an account?{" "}
+        <NavLink to="/register">
+          <span className="link">Sign Up</span>
+        </NavLink>
       </p>
     </div>
   );
