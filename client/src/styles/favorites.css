@@ -1,0 +1,5 @@
+.favorite-div{
+    display: flex;
+    justify-content: space-between;
+    color: #E8804C;
+}

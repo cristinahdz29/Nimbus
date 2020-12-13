@@ -4,6 +4,7 @@ const initialState = {
     dailyValues: [],
     hourlyValues: []
   },
+  favorites: {},
 };
 
 const dayjs = require('dayjs')

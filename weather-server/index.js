@@ -5,6 +5,7 @@ const cors = require("cors");
 const models = require("./models");
 const { Router } = require("express");
 const bcrypt = require("bcryptjs");
+const jwt = require('jsonwebtoken')
 const port = 3001;
 
 index.use(cors()); // enable CORS
@@ -20,7 +21,7 @@ index.get("/users", async (req, res) => {
 index.post("/register/user", (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
-
+  
   //checking if user already exists
   models.Users.findOne({
     where: {
@@ -69,18 +70,20 @@ index.post("/login/user", (req, res) => {
     if (user) {
       let storedPassword = user.password;
       userId = user.id;
+      
       bcrypt.compare(password, storedPassword)
       .then((result) => {
         if (result) {
           const loggedInUser = user.toJSON()
           delete loggedInUser.password;
-          res.status(200).json(loggedInUser);
+          const token = jwt.sign({ userId: userId }, "NIMBUSKEY");
+          res.json({ token: token });
         } else {
           res.status(500).send({error: 'something went wrong'})
         }
       })
     } else {
-      res.status(500).send({message: 'Incorrect username or password'})
+      res.json({message: 'Incorrect username or password'})
     }
   });
 });

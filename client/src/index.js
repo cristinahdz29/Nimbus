@@ -29,7 +29,7 @@ ReactDOM.render(
             <Route component={Login} path="/" exact></Route>
             <Route component={Register} path="/register"></Route>
             <Route component={Weather} path="/weather"></Route>
-            <Route component={Favorites} path="/user/favorites"></Route>
+            <Route component={Favorites} path="/favorites"></Route>
             <Route component={getCityFromCoordinates} path="/test"></Route>
           </Switch>
         </BaseLayout>

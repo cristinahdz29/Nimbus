@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 // import NavLink from 'react-bootstrap/esm/NavLink'
 import { NavLink } from "react-router-dom";
+import axios from "axios"
 
 import "../styles/login.css"
 import Cloud from "./Cloud";
@@ -13,10 +14,7 @@ function Login(props) {
   // make a local state to store username and
   // password from textboxes
   // Give initial state blank values
-  const [user, setUser] = useState({
-    username: " ",
-    password: " ",
-  });
+  const [user, setUser] = useState({});
 
   const handleOnChange = (e) => {
     setUser({
@@ -26,26 +24,51 @@ function Login(props) {
   };
   //declare function to post to server
   const userLoggedIn = async () => {
-    const response = await fetch("http://localhost:3001/login/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    const result = response.json();
-    console.log(result);
-    return result;
+    
+    //making same fetch call but with axios
+    const response = await axios.post('http://localhost:3001/login/user', {
+      username: user.username,
+      password: user.password
+    })
+    const result = response.data
+    return result
+    
+    // const response = await fetch("http://localhost:3001/login/user", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(user),
+    // });
+    // const result = response.json();
+    // console.log(result);
+    // return result;
   };
 
   //declare function that will call userLoggedIn function
   //When button clicked
   //if credentials exist, redirect them to weather page
   const handleLogin = async () => {
-    let user = await userLoggedIn();
+    
+    let userToken = await userLoggedIn();
+    //const response = await axios.post("http://localhost:3001/login/user", {
+    //   username: user.username,
+    //   password: user.password,
+    // });
+    // const result = response.data;
+    // console.log(result);
+    //console.log(user)
     if (user) {
+      const token = userToken.token
+      localStorage.setItem('jsonwebtoken', token)
+       
       props.history.push("/weather");
     }
+    
+    // let user = await userLoggedIn();
+    // if (user) {
+    //   props.history.push("/weather");
+    // }
   };
   return (
     <div className="login-div">
@@ -60,6 +83,7 @@ function Login(props) {
           <Form.Control
             class="input-sizing"
             type="username"
+            name= 'username'
             placeholder="Enter email"
             onChange={handleOnChange}
           />
@@ -70,6 +94,7 @@ function Login(props) {
           <Form.Control
             class="input-sizing"
             type="password"
+            name="password"
             placeholder="Password"
             onChange={handleOnChange}
           />

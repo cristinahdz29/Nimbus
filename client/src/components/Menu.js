@@ -80,7 +80,7 @@ function Menu(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {/* <Nav.Link href="#home">Home</Nav.Link> */}
-            <NavLink to="/user/favorites">
+            <NavLink to="/favorites">
               <div className="title">Favorites</div>
             </NavLink>
             <Nav.Link href="#link">
