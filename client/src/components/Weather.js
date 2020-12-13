@@ -39,10 +39,12 @@ function Weather(props) {
             exclude: "minutely",
             appid: apiKey,
             units: "imperial",
+            lang: props.apiLanguage
           },
         });
         const result = response.data
         console.log(result)
+        console.log(props.apiLanguage)
         
         apiKey = "AIzaSyDHy8QmVO1C4nSFZhTo9KZZ24Py0IuHrY4";
         apiURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&result_type=locality&key=${apiKey}`;
@@ -88,7 +90,8 @@ function Weather(props) {
 // want to display parts of the global state
 const mapStateToProps = (state) => {
     return {
-        weather: state.weather
+        weather: state.weather,
+        apiLanguage: state.apiLanguage
     }
 }
 

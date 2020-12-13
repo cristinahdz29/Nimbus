@@ -11,7 +11,7 @@ function CurrentWeather(props) {
         <>
           <div className="favorite">
             <Button variant="outline-info" size="sm">
-              Favorite
+              {props.strings.favorite_button}
             </Button>
           </div>
           <h1 id="city">{props.weather.city}</h1>
@@ -36,7 +36,8 @@ function CurrentWeather(props) {
 
 const mapStateToProps = (state) => {
     return{
-        weather: state.weather
+        weather: state.weather,
+        strings: state.strings
     }
 }
 

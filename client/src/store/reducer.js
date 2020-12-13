@@ -1,19 +1,26 @@
+import { English, Spanish, French } from "../components/languages/languages";
+
 const initialState = {
   weather: {
     isWeatherLoaded: false,
     dailyValues: [],
-    hourlyValues: []
+    hourlyValues: [],
   },
   favorites: {},
+  strings: English,
+  DateTimeLanguage: "en-us",
+  apiLanguage: 'en' 
 };
 
-const dayjs = require('dayjs')
+// props.strings.feels_like
+
+const dayjs = require("dayjs");
 
 const reducer = (state = initialState, action) => {
   if (action.type == "ON_FETCHED_WEATHER") {
     const utcDate = new Date(action.payload.current.dt * 1000);
     const localDate = new Date(utcDate.toLocaleString());
-    const dayOfWeek = new Intl.DateTimeFormat("en-US", {
+    const dayOfWeek = new Intl.DateTimeFormat(state.DateTimeLanguage, {
       weekday: "long",
     }).format(localDate);
     const feels_like = Math.round(action.payload.current.feels_like);
@@ -22,9 +29,9 @@ const reducer = (state = initialState, action) => {
     const mainDescription = action.payload.current.weather[0].main;
     const description = action.payload.current.weather[0].description;
     const icon = action.payload.current.weather[0].icon;
-    const wind_speed = action.payload.current.wind_speed
-    const clouds = action.payload.current.clouds
-    const uvi = action.payload.current.uvi
+    const wind_speed = action.payload.current.wind_speed;
+    const clouds = action.payload.current.clouds;
+    const uvi = action.payload.current.uvi;
 
     const utcDateSunrise = new Date(action.payload.current.sunrise * 1000);
     const localDateSunrise = new Date(utcDateSunrise.toLocaleString());
@@ -33,7 +40,7 @@ const reducer = (state = initialState, action) => {
     const utcDateSunset = new Date(action.payload.current.sunset * 1000);
     const localDateSunset = new Date(utcDateSunset.toLocaleString());
     const sunset = dayjs(localDateSunset).format("h:mm A");
-    
+
     const dailyValues = action.payload.daily.map((day) => ({
       feels_like_day: day.feels_like.day,
       feels_like_night: day.feels_like.night,
@@ -47,7 +54,7 @@ const reducer = (state = initialState, action) => {
       date_time: (() => {
         const utcDate = new Date(day.dt * 1000);
         const localDate = new Date(utcDate.toLocaleString());
-        return new Intl.DateTimeFormat("en-US", {
+        return new Intl.DateTimeFormat(state.DateTimeLanguage, {
           weekday: "long",
         }).format(localDate);
       })(),
@@ -66,7 +73,7 @@ const reducer = (state = initialState, action) => {
       date_time: (() => {
         const utcDate = new Date(hour.dt * 1000);
         const localDate = new Date(utcDate.toLocaleString());
-        return dayjs(localDate).format("h A"); 
+        return dayjs(localDate).format("h A");
       })(),
       feels_like: hour.feels_like,
       humidity: hour.humidity,
@@ -97,6 +104,32 @@ const reducer = (state = initialState, action) => {
         ...action.payload,
       },
     };
+  }
+  if (action.type == "ON_LANGUAGE") {
+    if(action.payload == 'en') {
+      return {
+        ...state,
+        strings: English,
+        DateTimeLanguage: "en-us",
+        apiLanguage: "en"
+      };
+    }
+    if (action.payload == "es") {
+      return {
+        ...state,
+        strings: Spanish,
+        DateTimeLanguage: "es",
+        apiLanguage: "es",
+      };
+    }
+    if (action.payload == "fr") {
+      return {
+        ...state,
+        strings: French,
+        DateTimeLanguage: "fr",
+        apiLanguage: "fr",
+      };
+    }
   }
   return state;
 };

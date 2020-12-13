@@ -9,31 +9,31 @@ function CurrentWeatherDetails(props) {
       {props.weather.isWeatherLoaded ? (
         <>
           <div className="details">
-            <p className="label">FEELS LIKE</p>
+            <p className="label">{props.strings.feels_like}</p>
             <p className="value">{props.weather.feels_like} &deg;F</p>
           </div>
           <div className="details">
-            <p className="label">HUMIDITY</p>
+            <p className="label">{props.strings.humidity}</p>
             <p className="value">{props.weather.humidity} %</p>
           </div>
           <div className="details">
-            <p className="label">SUNRISE</p>
+            <p className="label">{props.strings.sunrise}</p>
             <p className="value">{props.weather.sunrise}</p>
           </div>
           <div className="details">
-            <p className="label">SUNSET</p>
+            <p className="label">{props.strings.sunset}</p>
             <p className="value">{props.weather.sunset}</p>
           </div>
           <div className="details">
-            <p className="label">CLOUDINESS</p>
+            <p className="label">{props.strings.cloudiness}</p>
             <p className="value">{props.weather.clouds} %</p>
           </div>
           <div className="details">
-            <p className="label">WIND SPEED</p>
+            <p className="label">{props.strings.wind_speed}</p>
             <p className="value">{props.weather.wind_speed} mph</p>
           </div>
           <div className="details">
-            <p className="label">UV INDEX</p>
+            <p className="label">{props.strings.uv_index}</p>
             <p className="value">{props.weather.uvi} </p>
           </div>
         </>
@@ -47,6 +47,7 @@ function CurrentWeatherDetails(props) {
 const mapStateToProps = (state) => {
   return {
     weather: state.weather,
+    strings: state.strings
   };
 };
 export default connect(mapStateToProps)(CurrentWeatherDetails);

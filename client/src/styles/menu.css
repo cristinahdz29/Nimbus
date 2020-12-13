@@ -6,10 +6,15 @@
     color: #F3F3F3;
     font-weight: 600;
     font-size: 26px;
+    display: flex;
 }
 
 .title {
     color: #F3F3F3;
     font-weight: 600;
     font-size: 22px;
+}
+
+.languages-dropdown {
+    color: #F3F3F3;
 }
