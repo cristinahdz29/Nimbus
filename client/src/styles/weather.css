@@ -1,6 +1,7 @@
 @media only screen and (min-width: 1025px) {
     .desktop-current-weather {
     display: flex;
+    margin-bottom: 3%;
 }
 
     .current-weather-div, .current-weather-details-div {
@@ -8,13 +9,14 @@
 }
 
     .current-weather-details-div {
-        border-left: 3px solid #F4AD78;
-        margin-top: 7%;
+        /* border-left: 3px solid #F4AD78; */
+        margin-top: 8.5%;
+        margin-left: 3%;
     }
 
     .details {
         border: none;
-        padding-left: 10%;
+        width: 100%;
     }
 
     #city {
@@ -43,5 +45,29 @@
     .temp {
         text-align: right;
     }
+
+    .label {
+        font-size: 24px;
+    }
+
+    .value {
+        font-size: 35px;
+    }
+
+    .row-direction-div {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2%;
+    }
+
+    .hourly-main-div, .daily-main-div {
+    width: 80%;
+}
+
+    .hour p, .hour-temp p {
+    text-align: center;
+    font-size: 23px;
+}
+
 }
 

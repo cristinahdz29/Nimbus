@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
 import "../styles/favorites.css";
 import { connect } from "react-redux";
+import "../images/rainsvg.png"
 
 function Favorites(props) {
   // create a local state
@@ -38,6 +39,7 @@ function Favorites(props) {
           <Accordion.Toggle as={Card.Header} eventKey="1">
             <div className="favorite-div">
               <p>City Name</p> <p>Temp &deg;F</p>
+             
             </div>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="1">
