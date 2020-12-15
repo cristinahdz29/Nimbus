@@ -7,6 +7,7 @@
     font-weight: 600;
     font-size: 26px;
     display: flex;
+    align-items: center;
 }
 
 .title {
@@ -17,4 +18,5 @@
 
 .languages-dropdown {
     color: #F3F3F3;
+    padding-top: 13px;
 }

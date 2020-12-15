@@ -1,4 +1,4 @@
-import { English, Spanish, French } from "../components/languages/languages";
+import { English, Spanish, French, Vietnamese, Chinese } from "../components/languages/languages";
 
 const initialState = {
   weather: {
@@ -9,7 +9,10 @@ const initialState = {
   favorites: {},
   strings: English,
   DateTimeLanguage: "en-us",
-  apiLanguage: 'en' 
+  apiLanguage: "en",
+  tempUnitSymbol: "F",
+  tempUnit: 'imperial',
+  windSpeedUnits: 'mph'
 };
 
 // props.strings.feels_like
@@ -128,6 +131,40 @@ const reducer = (state = initialState, action) => {
         strings: French,
         DateTimeLanguage: "fr",
         apiLanguage: "fr",
+      };
+    }
+    if (action.payload == "vi") {
+      return {
+        ...state,
+        strings: Vietnamese,
+        DateTimeLanguage: "vi",
+        apiLanguage: "vi",
+      };
+    }
+    if (action.payload == "zh_cn") {
+      return {
+        ...state,
+        strings: Chinese,
+        DateTimeLanguage: "zh-cn",
+        apiLanguage: "zh_cn",
+      };
+    }
+  }
+  if (action.type == 'ON_UNITS' ) {
+    if(action.payload == "imperial") {
+      return {
+        ...state,
+        tempUnitSymbol: "F",
+        tempUnit: "imperial",
+        windSpeedUnits: "mph",
+      };
+    }
+    if (action.payload == 'metric') {
+      return {
+        ...state,
+        tempUnitSymbol: "C",
+        tempUnit: "metric",
+        windSpeedUnits: "mps",
       };
     }
   }

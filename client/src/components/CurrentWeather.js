@@ -9,17 +9,19 @@ function CurrentWeather(props) {
       {/* <h2>Current Weather Box</h2> */}
       {props.weather.isWeatherLoaded ? (
         <>
-          <div className="favorite">
+          {/* <div className="favorite">
             <Button variant="outline-info" size="sm">
               {props.strings.favorite_button}
             </Button>
-          </div>
+          </div> */}
           <h1 id="city">{props.weather.city}</h1>
           <h2>{props.weather.description}</h2>
           <img
             src={`http://openweathermap.org/img/wn/${props.weather.icon}@2x.png`}
           ></img>
-          <p id="temp">{props.weather.temp} &deg;F </p>
+          <p id="temp">
+            {props.weather.temp} &deg;{props.tempUnitSymbol}{" "}
+          </p>
           {/* <p> Feels Like: {props.weather.feels_like} &deg;F </p>
           <p>💧 {props.weather.humidity} %</p>
           <p>
@@ -35,10 +37,12 @@ function CurrentWeather(props) {
 }
 
 const mapStateToProps = (state) => {
-    return{
-        weather: state.weather,
-        strings: state.strings
-    }
+    return {
+      weather: state.weather,
+      strings: state.strings,
+      tempUnit: state.tempUnit,
+      tempUnitSymbol: state.tempUnitSymbol
+    };
 }
 
 export default connect(mapStateToProps)(CurrentWeather);

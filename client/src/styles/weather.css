@@ -1,0 +1,47 @@
+@media only screen and (min-width: 1025px) {
+    .desktop-current-weather {
+    display: flex;
+}
+
+    .current-weather-div, .current-weather-details-div {
+    width: 50%;
+}
+
+    .current-weather-details-div {
+        border-left: 3px solid #F4AD78;
+        margin-top: 7%;
+    }
+
+    .details {
+        border: none;
+        padding-left: 10%;
+    }
+
+    #city {
+        font-size: 58px;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-top: 6%;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .icon {
+        text-align: center;
+    }
+
+    .temp {
+        text-align: right;
+    }
+}
+

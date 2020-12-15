@@ -10,7 +10,7 @@ function CurrentWeatherDetails(props) {
         <>
           <div className="details">
             <p className="label">{props.strings.feels_like}</p>
-            <p className="value">{props.weather.feels_like} &deg;F</p>
+            <p className="value">{props.weather.feels_like} &deg;{props.tempUnitSymbol}</p>
           </div>
           <div className="details">
             <p className="label">{props.strings.humidity}</p>
@@ -30,7 +30,7 @@ function CurrentWeatherDetails(props) {
           </div>
           <div className="details">
             <p className="label">{props.strings.wind_speed}</p>
-            <p className="value">{props.weather.wind_speed} mph</p>
+            <p className="value">{props.weather.wind_speed} {props.windSpeedUnits}</p>
           </div>
           <div className="details">
             <p className="label">{props.strings.uv_index}</p>
@@ -38,7 +38,7 @@ function CurrentWeatherDetails(props) {
           </div>
         </>
       ) : (
-        <p>"Loading..."</p>
+        <p></p>
       )}
     </div>
   );
@@ -47,7 +47,10 @@ function CurrentWeatherDetails(props) {
 const mapStateToProps = (state) => {
   return {
     weather: state.weather,
-    strings: state.strings
+    strings: state.strings,
+    tempUnit: state.tempUnit,
+    tempUnitSymbol: state.tempUnitSymbol,
+    windSpeedUnits: state.windSpeedUnits
   };
 };
 export default connect(mapStateToProps)(CurrentWeatherDetails);

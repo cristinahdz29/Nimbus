@@ -117,7 +117,7 @@ function Menu(props) {
                     lon: longitude,
                     exclude: "minutely",
                     appid: apiKey,
-                    units: "imperial",
+                    units: props.tempUnit,
                     lang: language,
                   },
                 });
@@ -144,6 +144,14 @@ function Menu(props) {
               <NavDropdown.Item eventKey="fr">
                 {props.strings.french}
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item eventKey="vi">
+                {props.strings.vietnamese}
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item eventKey="zh_cn">
+                {props.strings.chinese}
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -154,11 +162,40 @@ function Menu(props) {
               }
               id="basic-nav-dropdown"
               className="title"
+              onSelect={async (unit) => {
+                await props.onUnitsSelected(unit);
+
+                let latitude = props.weather.lat;
+                let longitude = props.weather.lon;
+                let apiKey = `00b0dda3295804976daaf4ca564bdf04`;
+                let apiURL = `https://api.openweathermap.org/data/2.5/onecall`;
+
+                let response = await axios.get(apiURL, {
+                  params: {
+                    lat: latitude,
+                    lon: longitude,
+                    exclude: "minutely",
+                    appid: apiKey,
+                    units: unit,
+                    lang: props.apiLanguage,
+                  },
+                });
+                const result = response.data;
+                console.log(result);
+                console.log(props.apiLanguage);
+
+                apiKey = "AIzaSyDHy8QmVO1C4nSFZhTo9KZZ24Py0IuHrY4";
+                apiURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&result_type=locality&key=${apiKey}`;
+                response = await axios.get(apiURL);
+                const cityData = response.data;
+                let city = cityData.results[0].formatted_address.split(",")[0];
+                props.onFetchWeather({ ...result, city });
+              }}
             >
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item href="#action/3.1" eventKey="imperial">
                 {props.strings.fahrenheit}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="#action/3.2" eventKey="metric">
                 <NavDropdown.Divider />
                 {props.strings.celsius}
               </NavDropdown.Item>
@@ -195,6 +232,8 @@ const mapStateToProps = (state) => {
     weather: state.weather,
     strings: state.strings,
     apiLanguage: state.apiLanguage,
+    tempUnit: state.tempUnit,
+    tempUnitSymbol: state.tempUnitSymbol
   };
 };
 
@@ -208,6 +247,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch({ type: "ON_FETCHED_WEATHER", payload: weather }),
     onLanguageSelected: (language) =>
       dispatch({ type: "ON_LANGUAGE", payload: language }),
+    onUnitsSelected: (units) => dispatch({ type: "ON_UNITS", payload: units }),
   };
 };
 
