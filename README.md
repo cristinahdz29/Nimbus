@@ -56,7 +56,9 @@ Why an app such as this can be helpful:
 ## Usage
 * Search for a particular city or allow Nimbus to use your current location to view current, hourly, and daily forecasts. Choose your preferred language and temperature units.
 ## Videos and Screenshots
-<img src="https://github.com/cristinahdz29/Plantr/blob/master/images/Screen-Recording-2020-11-06-at-1.gif" width=900 height=500>
+<img src="/client/src/videos/citySearchVideo.gif" width=900 height=500>
+<img src="/client/src/videos/languagesVideo.gif" width=900 height=500>
+<img src="/client/src/videos/unitsVideo.gif" width=900 height=500>
 <img src="/client/src/images/nimbusFS.png" width=900 height=500>
 <img src="/client/src/images/hourlyDaily.png" width=900 height=500>
 <img src="/client/src/images/mobileNimbus.png" height=500>
