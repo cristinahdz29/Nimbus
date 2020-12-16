@@ -62,6 +62,7 @@ Why an app such as this can be helpful:
 <img src="/client/src/images/nimbusFS.png" width=900 height=500>
 <img src="/client/src/images/hourlyDaily.png" width=900 height=500>
 <img src="/client/src/images/mobileNimbus.png" height=500>
+<img src="/client/src/videos/mobile2.gif" width=900 height=500>
 
 <!-- CONTACT -->
 ## Contact
