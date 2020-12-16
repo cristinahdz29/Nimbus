@@ -31,7 +31,7 @@ Nimbus is a weather application designed with accessibility in mind. What is acc
 <p align='center'><img src="/images/plantrLogo.png"></img></p>
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 The inspiration behind Nimbus stemmed from a conversation I had with my parents after showing them previous projects I had completed during my time in a coding bootcamp. I expected to recieve an excited and thrilled reaction from them, but instead got the complete opposite. It wasn't that they weren't proud of me and my accomplishments. The issue was that all of my apps were in English, a language they did not speak. As developers, it's easy to assume that all users can see and use a keyboard, mouse, or touch screen, and can interact with your page content the same way you do. This can lead to an experience that works well for some people, but creates issues that range from simple annoyances to show-stoppers for others, like my parents. 
-
+<br>
 After this experience, I wanted to create an application that strived to be as accessible as possible, and thus, Nimbus was born! Nimbus is a weather application designed with accessibility in mind. My goal was for Nimbus to provide accurate weather data and display it in a way that is accessible to all users. The minimal design accomodates users with cognitive conditions like ADD, Dyslexia, and Autism because it minimizes distractions and cognitive load. The blue and orange color scheme used in Nimbus is well-known color blind friendly palette. Nimbus also allows users to select between 5 different languages as well as their preferred unit of temperature.
 
 Why an app such as this can be helpful:
