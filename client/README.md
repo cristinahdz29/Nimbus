@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# <p align="center">Nimbus
+Nimbus is a weather application designed with accessibility in mind. What is accessibility? When a site is said to be accessible, it means that its content is available, and its functionality can be operated, by anyone, regardless of impairments of disabilities.   Not only does Nimbus display the current, hourly and daily weather for any city, but it also allows users to select their preffered units of temperature and switch between 5 languages (English, Spanish, French, Vietnamese, and Chinese). Our color scheme and minimal design was implemented to accomodate those with color blindness and cognitive conditions like ADD, Dyslexia, Autism.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+</p>
 
-In the project directory, you can run:
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/crisitinadz29/Plantr">
+    <img src="/images/plantrHeader.png">
+  </a>
 
-### `npm start`
+  <h3 align="center">Nimbus Project</h3><!-- YOUR_TITLE-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Usage](#usage)
+* [Videos And Screenshots](#videos-and-screenshots)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align='center'><img src="/images/plantrLogo.png"></img></p>
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+Our passion for plants inspired us to create an app that enables fellow plant lovers to upload and share images and information about their plants. In this application users are able to create a collection of their plants and make posts. Plantr users can also view, like, and comment on posts belonging to other users. Our goal with this app is to create a space where new and existing plant parents can interact and share their love for all things plants.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Why an app such as this can be helpful:
+* Provides accurate forecasts to enable users to make informed decisions.
+* Accessibility features ensure that all potential users, including people with disabilities, have a decent user experience and are able to easily access information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Built With
+* React
+* Redux
+* JavaScript
+* CSS
+* HTML
 
-## Learn More
+<!-- USAGE EXAMPLES -->
+## Usage
+* Search for a particular city or allow Nimbus to use your current location to view current, hourly, and daily forecasts. Choose your preferred language and temperature units.
+## Videos and Screenshots
+<img src="https://github.com/cristinahdz29/Plantr/blob/master/images/Screen-Recording-2020-11-06-at-1.gif" width=900 height=500>
+<img src="/images/login.png" width=900 height=500>
+<img src="/images/homeMobile.png">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- CONTACT -->
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Cristina Hernandez - [Github](https://github.com/cristinahdz29)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Project Link: https://nimbus-weather.surge.sh
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- ACKNOWLEDGEMENTS -->
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=flat-square
+[contributors-url]: https://github.com/github_username/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
+[forks-url]: https://github.com/github_username/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
+[stars-url]: https://github.com/github_username/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
+[issues-url]: https://github.com/github_username/repo/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=flat-square
+[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/github_username
+[product-screenshot]: images/screenshot.png

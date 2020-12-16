@@ -155,10 +155,10 @@ const Chinese = {
 
 
 
-module.exports = {
+export {
   English,
   Spanish,
   French,
   Vietnamese,
-  Chinese
+  Chinese,
 };
