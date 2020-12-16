@@ -8,7 +8,7 @@ Nimbus is a weather application designed with accessibility in mind. What is acc
 <br />
 <p align="center">
   <a href="https://github.com/crisitinadz29/Plantr">
-    <img src="/images/plantrHeader.png">
+    <img src="/client/src/images/nimbus.png">
   </a>
 
   <h3 align="center">Nimbus Project</h3><!-- YOUR_TITLE-->

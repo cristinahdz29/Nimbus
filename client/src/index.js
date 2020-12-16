@@ -26,7 +26,7 @@ ReactDOM.render(
         <BaseLayout>
           <Switch>
             {/* <Route component={App} path="/app" exact></Route>
-            <Route component={Login} path="/" exact></Route>
+            <Route component={Login} path="/login" exact></Route>
             <Route component={Register} path="/register"></Route> */}
             <Route component={Weather} path="/" exact></Route>
             {/* <Route component={Favorites} path="/favorites"></Route>
