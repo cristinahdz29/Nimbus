@@ -28,7 +28,6 @@ Nimbus is a weather application designed with accessibility in mind. What is acc
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 The inspiration behind Nimbus stemmed from a conversation I had with my parents after showing them previous projects I had completed during my time in a coding bootcamp. I expected to recieve an excited and thrilled reaction from them, but instead got the complete opposite. It wasn't that they weren't proud of me and my accomplishments. The issue was that all of my apps were in English, a language they did not speak. As developers, it's easy to assume that all users can see and use a keyboard, mouse, or touch screen, and can interact with your page content the same way you do. This can lead to an experience that works well for some people, but creates issues that range from simple annoyances to show-stoppers for others, like my parents. 
 <br>
