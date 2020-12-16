@@ -7,7 +7,7 @@ import Footer from "./Footer";
 function BaseLayout(props) {
   return (
     <div>
-      <Menu {...props} ></Menu>
+      <header><Menu {...props} ></Menu></header>
       {props.children}
       <Footer />
     </div>

@@ -138,7 +138,6 @@ function Menu(props) {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item eventKey="es">
-                
                 {props.strings.spanish}
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -198,7 +197,6 @@ function Menu(props) {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.2" eventKey="metric">
-                
                 {props.strings.celsius}
               </NavDropdown.Item>
             </NavDropdown>

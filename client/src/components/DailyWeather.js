@@ -20,10 +20,16 @@ function DailyWeather(props) {
                 src={`http://openweathermap.org/img/wn/${day.icon}@2x.png`}
               ></img>
             </div>
+            <div className="pop-temp-flex">
+              {day.id < 700 ? (<div className="pop">
+              <p>{day.pop} %</p>
+            </div>): ('')}
+            
             <div className="temp">
               <p>
-                <b>{day.max_temp} </b> | {day.min_temp} 
+                <b>{day.max_temp} </b> | {day.min_temp}
               </p>
+            </div>
             </div>
           </div>
         ))}

@@ -7,6 +7,7 @@
     width: 85%;
     margin: 0 auto;
     border-top: 0.5px solid #F3AD78;
+    margin-bottom: 7%;
     
 }
 
@@ -16,11 +17,33 @@
     justify-content: space-evenly;
 }
 
-.weekday, .icon, .temp {
+.weekday, .icon, .pop-temp-flex {
     width: 33%;
     /* text-align: center; */
+} 
+
+.weekday p, .temp p {
+    font-size:  24px;
 }
+
 
 .temp, .icon{
    text-align: center; 
 }
+
+.pop-temp-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.pop-temp-flex p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.pop-temp-flex .pop p {
+    font-size: 17px;
+    color: #30C3CD;
+}
+

@@ -8,7 +8,27 @@
     
 }
 
-.hour p, .hour-temp p {
+/* .hourly-main-div::-webkit-scrollbar {
+  display: none;
+}  */
+
+.hour p, .hour-temp p, .pop p {
     text-align: center;
     font-size: 20px;
 }
+
+.hour p {
+    margin-bottom: 0px;
+}
+
+.pop p {
+    color: #1697B7;
+}
+
+.hour-div .hour .rain {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #1697B7;
+    font-size: 18px;
+}
+

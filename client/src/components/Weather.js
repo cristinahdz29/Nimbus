@@ -7,6 +7,7 @@ import CurrentWeatherDetails from "./CurrentWeatherDetails";
 import HourlyWeather from "./HourlyWeather";
 import useWindowDimensions from "../services/useWindowDimensions";
 import "../styles/weather.css"
+import Spinner from "react-bootstrap/Spinner"
 
 function Weather(props) {
   // make a local state to store weather object in
@@ -70,7 +71,7 @@ function Weather(props) {
   console.log(height, width, "DIMENSIONS");
 
   if (!props.weather.isWeatherLoaded) {
-    return <p>Loading...</p>;
+    return <div className="loadingSpinner" ><Spinner animation="border" variant="info" /></div>;
   }
   return (
     <div className="main-content">

@@ -1,11 +1,13 @@
 import React from 'react'
 import "../styles/footer.css"
+import Cloud from './Cloud'
 
 
 function Footer() {
     return (
-        <footer className="footer-color">
-            
+        <footer >
+            <Cloud />
+            <p><b>Nimbus</b></p>
         </footer>
     )
 }

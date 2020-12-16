@@ -11,6 +11,11 @@ function HourlyWeather(props) {
         <div className="hour-div">
           <div className="hour">
             <p>{hour.date_time}</p>
+            {hour.id < 700 ? (
+              <p className="rain"> {hour.pop} %</p>
+            ) : (
+              <p className="invisible rain">.</p>
+            )}
           </div>
           <div className="hour-icon">
             <img
@@ -19,7 +24,7 @@ function HourlyWeather(props) {
           </div>
           <div className="hour-temp">
             <p>
-              <b>{hour.temp} </b> 
+              <b>{hour.temp} </b>
             </p>
           </div>
         </div>

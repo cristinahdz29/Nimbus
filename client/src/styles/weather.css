@@ -1,3 +1,8 @@
+.loadingSpinner {
+    margin-left: 45%;
+    margin-top: 30%;
+}
+
 @media only screen and (min-width: 1025px) {
     .desktop-current-weather {
     display: flex;
@@ -66,8 +71,38 @@
 
     .hour p, .hour-temp p {
     text-align: center;
-    font-size: 23px;
+    font-size: 25px;
 }
+
+    .day-div {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .weekday p, .temp p {
+        font-size: 35px;
+    }
+
+    .pop-temp-flex .pop p {
+        font-size: 25px;
+    }
+
+    .footer p {
+        font-size: 30px;
+    }
+
+    .current-weather-details-div {
+        margin-bottom: 0px;
+    }
+
+    .loadingSpinner {
+        margin-top: 20%;
+        margin-left: 48%;
+    }
+
+    .hour-div .hour .rain {
+        font-size: 21px;
+    }
 
 }
 
