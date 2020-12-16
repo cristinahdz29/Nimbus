@@ -34,6 +34,9 @@ The inspiration behind Nimbus stemmed from a conversation I had with my parents 
 <br>
 After this experience, I wanted to create an application that strived to be as accessible as possible, and thus, Nimbus was born! Nimbus is a weather application designed with accessibility in mind. My goal was for Nimbus to provide accurate weather data and display it in a way that is accessible to all users. The minimal design accomodates users with cognitive conditions like ADD, Dyslexia, and Autism because it minimizes distractions and cognitive load. The blue and orange color scheme used in Nimbus is well-known color blind friendly palette. Nimbus also allows users to select between 5 different languages as well as their preferred unit of temperature.
 
+
+
+
 Why an app such as this can be helpful:
 * Provides accurate forecasts to enable users to make informed decisions.
 * Accessibility features ensure that all potential users, including people with disabilities, have a decent user experience and are able to easily access information.
